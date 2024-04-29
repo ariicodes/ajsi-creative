@@ -15,6 +15,10 @@ const config: Config = {
         "cambridge-blue": "#88A19B",
         almond: "#F1DECE",
       },
+      fontFamily: {
+        "serif: ['var(--font-frank-ruhl-libre)', 'serif']": [],
+        "sans: ['var(--font-quicksand)', 'sans-serif']": [],
+      },
     },
   },
   plugins: [],
