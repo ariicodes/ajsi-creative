@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import NavBar from "./ui/NavBar";
+import Footer from "./ui/Footer";
+import { Frank_Ruhl_Libre, Quicksand } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const frankRuhlLibre = Frank_Ruhl_Libre({
+  subsets: ["hebrew"],
+  display: "swap",
+  variable: "--font-frank-ruhl-libre",
+});
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-quicksand",
+});
 
 export const metadata: Metadata = {
   title: "AJSI Creative",
@@ -17,7 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${frankRuhlLibre.variable} ${quicksand.variable}`}>
+        <header>
+          <NavBar />
+        </header>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
