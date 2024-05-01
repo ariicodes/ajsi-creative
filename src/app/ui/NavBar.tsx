@@ -15,7 +15,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="flex h-[70px] w-screen flex-row bg-almond xl:justify-between">
+    <nav className="flex h-[70px] w-screen flex-row bg-almond xl:justify-between z-30">
       <div className="ml-6 mr-12 w-1/2 self-center xl:w-1/12">
         <Image src={headerLogo} alt="" height={26} width={115} />
       </div>
