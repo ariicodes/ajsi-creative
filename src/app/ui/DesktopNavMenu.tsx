@@ -7,7 +7,7 @@ import TikTok from "../../../public/TikTok.png";
 
 export default function DesktopNavMenu() {
   return (
-    <ul className="mr-6 flex flex-row items-center gap-10 text-right font-serif text-sm font-light text-gunmetal">
+    <ul className="mr-6 flex flex-row items-center gap-10 text-right font-serif text-lg font-light text-gunmetal">
       <li>
         <Link href="/">home</Link>
       </li>
@@ -38,7 +38,7 @@ export default function DesktopNavMenu() {
       <li>
         <DarkActionBtn
           content="book a consultation"
-          onClick={() => console.log("Book a consultation")}
+          route="/booking"
         />
       </li>
       <li className="flex flex-row gap-8 invert">
