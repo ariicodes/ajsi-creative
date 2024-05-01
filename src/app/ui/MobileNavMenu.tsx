@@ -13,12 +13,12 @@ export default function MobileNavMenu({ menuOpen, setMenuOpen }: any) {
 
   return (
     <div
-      className={`flex w-52 flex-col items-end justify-center bg-brown-sugar py-6 pr-6 text-white ${!menuOpen && "hidden"}`}
+      className={`flex w-52 flex-col items-end justify-center bg-brown-sugar py-6 pr-6 text-white ${!menuOpen && "hidden"} z-50 h-[629px]`}
     >
       <button onClick={handleMenuClick}>
         <XMarkIcon className="h-6 w-6 text-white" />
       </button>
-      <ul className="my-8 flex flex-col gap-5 text-right font-serif text-sm font-light">
+      <ul className="my-8 flex flex-col gap-5 text-right font-serif text-lg font-light">
         <li>
           <Link href="/">home</Link>
         </li>
