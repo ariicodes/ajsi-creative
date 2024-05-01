@@ -18,7 +18,10 @@ export default function MobileNavMenu({ menuOpen, setMenuOpen }: any) {
       <button onClick={handleMenuClick}>
         <XMarkIcon className="h-6 w-6 text-white" />
       </button>
-      <ul className="my-8 flex flex-col gap-5 text-right font-serif text-lg font-light">
+      <ul
+        className="mb-6 mt-5 flex flex-col gap-5 text-right font-serif text-lg font-light"
+        onClick={handleMenuClick}
+      >
         <li>
           <Link href="/">home</Link>
         </li>
@@ -47,10 +50,7 @@ export default function MobileNavMenu({ menuOpen, setMenuOpen }: any) {
           <Link href="/faq">faq</Link>
         </li>
         <li>
-          <DarkActionBtn
-            content="book a consultation"
-            onClick={() => console.log("Book a consultation")}
-          />
+          <DarkActionBtn content="book a consultation" route="/booking" />
         </li>
         <li className="flex w-full flex-row justify-between">
           <Link href="https://www.instagram.com/ajsi.creative/">
