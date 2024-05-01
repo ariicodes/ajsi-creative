@@ -16,8 +16,8 @@ const config: Config = {
         almond: "#F1DECE",
       },
       fontFamily: {
-        "serif: ['var(--font-frank-ruhl-libre)', 'serif']": [],
-        "sans: ['var(--font-quicksand)', 'sans-serif']": [],
+        serif: ["var(--font-frank-ruhl-libre)", "serif"],
+        sans: ["var(--font-quicksand)", "sans-serif"],
       },
     },
   },

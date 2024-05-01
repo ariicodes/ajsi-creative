@@ -27,8 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${frankRuhlLibre.variable} ${quicksand.variable}`}>
+    <html
+      lang="en"
+      className={`${frankRuhlLibre.variable} ${quicksand.variable}`}
+    >
+      <body className={`subpixel-antialiased`}>
         <header>
           <NavBar />
         </header>
