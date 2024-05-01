@@ -16,11 +16,11 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="z-30 flex h-[70px] w-screen flex-row bg-almond xl:justify-between">
+    <nav className="z-30 flex h-[70px] w-screen flex-row bg-almond">
       <Link href="/" className="ml-6 mr-12 w-1/2 self-center xl:w-1/12">
         <Image src={headerLogo} alt="" height={26} width={115} />
       </Link>
-      <div className="z-50 hidden self-center xl:block">
+      <div className="z-50 hidden self-center xl:block w-full pr-6">
         <DesktopNavMenu />
       </div>
       <div
