@@ -34,7 +34,7 @@ export const LightActionBtn = ({ content, route }: BtnProps) => {
   return (
     <button
       onClick={() => route && router.push(route)}
-      className="h-7 w-40 bg-almond pb-0.5 text-center font-serif text-base font-black text-gunmetal"
+      className="h-7 w-40 bg-almond pb-0.5 text-center font-serif text-base font-medium text-gunmetal"
     >
       {content}
     </button>
