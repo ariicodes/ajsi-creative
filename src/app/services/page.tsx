@@ -1,6 +1,6 @@
 import Heading from "../components/Heading";
-import ServiceCTA from "../components/Services/ServiceCTA";
-import ServicesList from "../components/Services/ServicesList";
+import ServiceCTA from "../components/services/ServiceCTA";
+import ServicesList from "../components/services/ServicesList";
 
 const services = [
   {
