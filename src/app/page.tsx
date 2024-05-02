@@ -1,6 +1,6 @@
-import HeroSection from "./ui/Home/HeroSection";
-import MainCTA from "./ui/MainCTA";
-import SubscriptionForm from "./ui/SubscriptionForm";
+import HeroSection from "./components/Home/HeroSection";
+import MainCTA from "./components/MainCTA";
+import SubscriptionForm from "./components/SubscriptionForm";
 
 export default function Home() {
   return (

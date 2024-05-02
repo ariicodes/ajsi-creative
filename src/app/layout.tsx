@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "./ui/NavBar";
-import Footer from "./ui/Footer";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import { Frank_Ruhl_Libre, Quicksand } from "next/font/google";
 
 const frankRuhlLibre = Frank_Ruhl_Libre({
