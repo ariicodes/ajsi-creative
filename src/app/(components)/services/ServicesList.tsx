@@ -1,5 +1,5 @@
 interface Package {
-  id: number;
+  _id: number;
   name: string;
   services: string[];
   startingPrice: number;
@@ -10,7 +10,7 @@ export default function ServicesList({ services }: { services?: Package[] }) {
     <ul className="min-h-[460px] pb-6 pt-2">
       {services &&
         services.map((service) => (
-          <li key={service.id} className="pt-4">
+          <li key={service._id} className="pt-4">
             <div className="px-6 pb-2">
               <h2 className="text-xl font-semibold uppercase text-cordovan">
                 {service.name}
