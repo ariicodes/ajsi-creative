@@ -25,9 +25,9 @@ export default function MobileNavMenu({ menuOpen, setMenuOpen }: any) {
         <li>
           <Link href="/">home</Link>
         </li>
-        {/* <li>
+        <li>
           <Link href="/portfolio">portfolio</Link>
-        </li> */}
+        </li>
         <li>
           <Link href="/services">services</Link>
         </li>
