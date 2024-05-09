@@ -2,7 +2,7 @@ import { XMarkIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import Image from "next/image";
 import { DarkActionBtn } from "./Buttons";
-import Instagram from "../../../public/instagram.png";
+import Instagram from "../../../public/Instagram.png";
 import LinkedIn from "../../../public/LinkedIn.png";
 import TikTok from "../../../public/TikTok.png";
 
