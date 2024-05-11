@@ -11,7 +11,6 @@ export default async function Services() {
       const res = await fetch(`${url}/packages`, {
         cache: "no-cache",
       });
-      console.log(url)
       return res.json();
     } catch (error: any) {
       console.log(`Failed to load packages: ${error.message}
