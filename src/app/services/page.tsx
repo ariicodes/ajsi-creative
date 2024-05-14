@@ -2,10 +2,8 @@ import Heading from "../(components)/Heading";
 import SubscriptionForm from "../(components)/SubscriptionForm";
 import ServiceCTA from "../(components)/services/ServiceCTA";
 import ServicesList from "../(components)/services/ServicesList";
-import dotenv from "dotenv";
-dotenv.config();
+import { url } from "../../utils/config";
 
-const url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 export default async function Services() {
   const getPackages = async () => {
     try {
