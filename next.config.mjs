@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ajsi-project-assets.s3.amazonaws.com",
+      },
+    ],
+  },
+};
 
 export default nextConfig;
