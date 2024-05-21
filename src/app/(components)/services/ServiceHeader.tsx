@@ -10,7 +10,7 @@ export default function ServiceHeader({ service }: { service: Service }) {
         fill={true}
         className="object-cover"
       />
-      <div className="absolute inset-0 z-10 flex h-full flex-col justify-end bg-gradient-to-b from-gunmetal/50 from-25% via-gunmetal/80 via-50% to-gunmetal to-75% px-8 py-5">
+      <div className="absolute inset-0 z-10 flex h-full flex-col justify-end bg-gradient-to-b from-gunmetal/50 from-25% via-gunmetal/80 via-50% to-gunmetal to-75% px-6 py-5">
         <div>
           <h1 className="mb-2 text-xs font-medium uppercase text-brown-sugar">
             {service.title}
