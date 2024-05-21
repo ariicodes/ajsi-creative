@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "ajsi-project-assets.s3.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };
