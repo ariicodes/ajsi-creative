@@ -1,35 +1,47 @@
-interface Package {
-  _id: number;
-  name: string;
-  services: string[];
-  startingPrice: number;
+import Link from "next/link";
+
+interface Service {
+  _id: string;
+  title: string;
+  officialTitle: string;
+  rateType: string;
+  rate: number;
+  description: string;
+  benefitsTitle: string;
+  benefits: string[];
 }
 
-export default function ServicesList({ services }: { services?: Package[] }) {
+export default function ServicesList({ services }: { services?: Service[] }) {
+  let officialTitleSplit = (service: Service) => {
+    const officialTitleArr = service.officialTitle.split(":");
+    return officialTitleArr;
+  };
   return (
-    <div className="xl:flex xl:flex-col xl:items-center">
-      <ul className="min-h-[460px] pb-6 pt-2 xl:w-[650px]">
+    <section className="p-6">
+      <ul>
         {services &&
           services.map((service) => (
-            <li key={service._id} className="pt-4">
-              <div className="px-6 pb-2">
-                <h2 className="text-xl font-semibold uppercase text-cordovan">
-                  {service.name}
-                </h2>
-                <ul>
-                  {service.services.map((subService, index) => (
-                    <li key={index} className="-mt-1">
-                      {subService}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex h-[30px] flex-row items-center justify-center bg-cambridge-blue font-serif text-sm text-white">
-                <p>starting @ ${service.startingPrice}</p>
-              </div>
+            <li key={service._id} className="pr-2 pt-4">
+              <h3 className="text-xl font-medium uppercase text-cordovan">
+                {service.title}
+              </h3>
+              <p className="text-gunmetal leading-tight">
+                <span className="font-medium">
+                  {officialTitleSplit(service)[0]}
+                </span>
+                <span className="text-sm">
+                  {officialTitleSplit(service)[1]}
+                </span>
+              </p>
+              <Link
+                href={`/services/${service._id}`}
+                className="font-serif text-sm text-cambridge-blue"
+              >
+                click here to learn more!
+              </Link>
             </li>
           ))}
       </ul>
-    </div>
+    </section>
   );
 }

@@ -5,24 +5,24 @@ import ServicesList from "../(components)/services/ServicesList";
 import { url } from "../../utils/config";
 
 export default async function Services() {
-  const getPackages = async () => {
+  const getServices = async () => {
     try {
-      const res = await fetch(`${url}/packages`, {
+      const res = await fetch(`${url}/services`, {
         cache: "no-cache",
       });
       return res.json();
     } catch (error: any) {
-      console.log(`Failed to load packages: ${error.message}
+      console.log(`Failed to load services: ${error.message}
     `);
     }
   };
 
-  const packages = await getPackages();
+  const services = await getServices();
 
   return (
     <main>
       <Heading header="services" />
-      <ServicesList services={packages} />
+      <ServicesList services={services} />
       <SubscriptionForm />
       <ServiceCTA />
     </main>
