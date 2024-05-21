@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface Service {
+export interface Service {
   _id: string;
   title: string;
   officialTitle: string;
@@ -9,13 +9,15 @@ interface Service {
   description: string;
   benefitsTitle: string;
   benefits: string[];
+  imageSrc: string;
 }
 
+export const officialTitleSplit = (service: Service) => {
+  const officialTitleArr = service.officialTitle.split(":");
+  return officialTitleArr;
+};
+
 export default function ServicesList({ services }: { services?: Service[] }) {
-  let officialTitleSplit = (service: Service) => {
-    const officialTitleArr = service.officialTitle.split(":");
-    return officialTitleArr;
-  };
   return (
     <section className="p-6 xl:flex xl:flex-col xl:items-center xl:px-20">
       <ul className="xl:flex xl:flex-row xl:flex-wrap xl:gap-6">
