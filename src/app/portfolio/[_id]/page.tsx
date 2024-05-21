@@ -1,12 +1,10 @@
 import { Project } from "../../(components)/portfolio/ProjectLink";
-import dotenv from "dotenv";
 import Heading from "../../(components)/Heading";
 import SubscriptionForm from "../../(components)/SubscriptionForm";
 import MainCTA from "../../(components)/MainCTA";
 import SingleProject from "../../(components)/portfolio/SingleProject";
-dotenv.config();
+import { url } from "../../../utils/config";
 
-const url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 export default async function ProjectPage({
   params,
 }: {
