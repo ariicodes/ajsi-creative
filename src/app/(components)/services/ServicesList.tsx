@@ -17,15 +17,15 @@ export default function ServicesList({ services }: { services?: Service[] }) {
     return officialTitleArr;
   };
   return (
-    <section className="p-6">
-      <ul>
+    <section className="p-6 xl:flex xl:flex-col xl:items-center xl:px-20">
+      <ul className="xl:flex xl:flex-row xl:flex-wrap xl:gap-6">
         {services &&
           services.map((service) => (
-            <li key={service._id} className="pr-2 pt-4">
+            <li key={service._id} className="pr-2 pt-4 xl:w-96 xl:pr-0">
               <h3 className="text-xl font-medium uppercase text-cordovan">
                 {service.title}
               </h3>
-              <p className="text-gunmetal leading-tight">
+              <p className="leading-tight text-gunmetal xl:w-80">
                 <span className="font-medium">
                   {officialTitleSplit(service)[0]}
                 </span>
