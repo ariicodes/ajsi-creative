@@ -1,8 +1,8 @@
 import { Service } from "../../(components)/services/ServicesList";
 import { url } from "../../../utils/config";
-import MainCTA from "../../(components)/MainCTA";
 import ServiceHeader from "@/app/(components)/services/ServiceHeader";
 import ServiceDescription from "@/app/(components)/services/ServiceDescription";
+import MainCTA from "@/app/(components)/MainCTA";
 
 export default async function ServicePage({
   params,

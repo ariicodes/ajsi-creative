@@ -1,6 +1,6 @@
 import Heading from "../(components)/Heading";
+import MainCTA from "../(components)/MainCTA";
 import SubscriptionForm from "../(components)/SubscriptionForm";
-import ServiceCTA from "../(components)/services/ServiceCTA";
 import ServicesList from "../(components)/services/ServicesList";
 import { url } from "../../utils/config";
 
@@ -24,7 +24,7 @@ export default async function Services() {
       <Heading header="services" />
       <ServicesList services={services} />
       <SubscriptionForm />
-      <ServiceCTA />
+      <MainCTA />
     </main>
   );
 }
