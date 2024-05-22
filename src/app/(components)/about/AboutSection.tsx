@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
-    <div className="flex h-[590px] flex-col justify-center p-6 xl:items-center">
-      <p className="text-center text-sm text-gunmetal xl:w-[650px] xl:text-base">
+    <div className="flex flex-col justify-center px-6 py-10 xl:items-center">
+      <p className="text-sm text-gunmetal xl:px-80 xl:text-base">
         AJSI Creative, founded in 2023 and led by Ariela Israel, a solo creative
         powerhouse with expertise in graphic design, UI/UX design, brand
         identity design, full-stack software engineering, and photography. AJSI

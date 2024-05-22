@@ -7,8 +7,8 @@ interface Question {
 const FAQList = ({ faqs }: { faqs?: Question[] }) => {
   return (
     <div className="xl:flex xl:flex-col xl:items-center">
-      <div className="px-10 text-gunmetal">
-        <ol className="list-outside list-decimal py-6 xl:w-[650px]">
+      <div className="px-10 text-gunmetal xl:px-80">
+        <ol className="list-outside list-decimal py-8">
           {faqs &&
             faqs.map((faq) => (
               <li key={faq._id} className="pb-2">

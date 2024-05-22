@@ -13,7 +13,7 @@ const TestimonialsList = ({
     <div className="flex flex-col gap-5 p-7 xl:flex xl:min-h-[560px] xl:flex-col xl:items-center xl:justify-around">
       {testimonials &&
         testimonials.map((testimonial, index) => (
-          <div key={index} className="xl:w-[735px]">
+          <div key={index} className="xl:px-80">
             <p className="text-[0.9rem] font-semibold uppercase text-cordovan xl:text-base">
               &quot;{testimonial.testimonial}&quot;
             </p>
