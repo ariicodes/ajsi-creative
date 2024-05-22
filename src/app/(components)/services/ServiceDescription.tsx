@@ -9,7 +9,7 @@ export const benefitSplit = (benefit: string) => {
 
 export default function ServiceDescription({ service }: { service: Service }) {
   return (
-    <section className="p-6 text-sm text-gunmetal xl:flex xl:flex-col xl:items-center xl:px-20 ">
+    <section className="p-6 text-sm text-gunmetal xl:px-80 xl:text-base">
       <p className="">{service.description}</p>
       <h4 className="pt-4 font-bold">{service.benefitsTitle}</h4>
       <ul className="list-disc pl-6">
@@ -20,7 +20,7 @@ export default function ServiceDescription({ service }: { service: Service }) {
           </li>
         ))}
       </ul>
-      <p className="pt-4 font-serif text-xs text-cambridge-blue">
+      <p className="pt-4 font-serif text-xs text-cambridge-blue xl:text-sm">
         Starting at ${service.rate} per{" "}
         {service.rateType.includes("Project")
           ? "project"
@@ -29,7 +29,7 @@ export default function ServiceDescription({ service }: { service: Service }) {
             : "month"}
       </p>
       <div className="flex flex-row justify-end">
-        <Link href={`/services`} className="font-bold uppercase text-cordovan">
+        <Link href={`/services`} className="font-bold uppercase text-cordovan xl:text-lg">
           Back to Services &gt;
         </Link>
       </div>
