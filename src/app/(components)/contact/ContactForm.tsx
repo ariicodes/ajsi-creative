@@ -2,7 +2,11 @@ import { SubmitBtn } from "../Buttons";
 
 export default function ContactForm() {
   return (
-    <form className="flex flex-col gap-3 px-6 py-8 xl:px-80 xl:py-12 font-serif font-bold text-gunmetal">
+    <form
+      className="flex flex-col gap-3 px-6 py-8 font-serif font-bold text-gunmetal xl:px-80 xl:py-12"
+      action="https://formspree.io/f/mzbwgkwj"
+      method="POST"
+    >
       <label className="flex flex-col gap-2">
         Name
         <input
@@ -49,7 +53,7 @@ export default function ContactForm() {
             name="reason-for-contacting"
             id="service-inquiry"
             value="Service Inquiry"
-            className="size-3 rounded-full border-2 border-gunmetal focus:ring focus:border-brown-sugar"
+            className="size-3 rounded-full border-2 border-gunmetal focus:border-brown-sugar focus:ring"
           />
           <label
             htmlFor="service-inquiry"
@@ -64,7 +68,7 @@ export default function ContactForm() {
             name="reason-for-contacting"
             id="project-collaboration-subcontracting"
             value="Project Collaboration/Subcontracting"
-            className="size-3 rounded-full border-2 border-gunmetal focus:ring focus:border-brown-sugar"
+            className="size-3 rounded-full border-2 border-gunmetal focus:border-brown-sugar focus:ring"
           />
           <label
             htmlFor="project-collaboration-subcontracting"
@@ -79,7 +83,7 @@ export default function ContactForm() {
             name="reason-for-contacting"
             id="employment-opportunity"
             value="Employment Opportunity"
-            className="size-3 rounded-full border-2 border-gunmetal focus:ring focus:border-brown-sugar"
+            className="size-3 rounded-full border-2 border-gunmetal focus:border-brown-sugar focus:ring"
           />
           <label
             htmlFor="employment-opportunity"
@@ -94,7 +98,7 @@ export default function ContactForm() {
             name="reason-for-contacting"
             id="other"
             value="other"
-            className="size-3 rounded-full border-2 border-gunmetal focus:ring focus:border-brown-sugar"
+            className="size-3 rounded-full border-2 border-gunmetal focus:border-brown-sugar focus:ring"
           />
           <label htmlFor="other" className="pl-2 font-sans text-xs font-normal">
             Other <span className="italic">(specify below)</span>
