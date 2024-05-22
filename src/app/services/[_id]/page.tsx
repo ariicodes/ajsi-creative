@@ -2,6 +2,7 @@ import { Service } from "../../(components)/services/ServicesList";
 import { url } from "../../../utils/config";
 import MainCTA from "../../(components)/MainCTA";
 import ServiceHeader from "@/app/(components)/services/ServiceHeader";
+import ServiceDescription from "@/app/(components)/services/ServiceDescription";
 
 export default async function ServicePage({
   params,
@@ -10,9 +11,7 @@ export default async function ServicePage({
 }) {
   const getService = async () => {
     try {
-      const res = await fetch(`${url}/services/${params._id}`, {
-        cache: "no-cache",
-      });
+      const res = await fetch(`${url}/services/${params._id}`);
       return res.json();
     } catch (error: any) {
       console.log(`Failed to load service: ${error.message}
@@ -25,6 +24,7 @@ export default async function ServicePage({
   return (
     <div>
       <ServiceHeader service={service} />
+      <ServiceDescription service={service} />
       <MainCTA />
     </div>
   );
