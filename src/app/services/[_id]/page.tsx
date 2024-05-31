@@ -1,25 +1,21 @@
 import { Service } from "../../(components)/services/ServicesList";
-import { url } from "../../../utils/config";
 import ServiceHeader from "@/app/(components)/services/ServiceHeader";
 import ServiceDescription from "@/app/(components)/services/ServiceDescription";
 import MainCTA from "@/app/(components)/MainCTA";
+import services from "@/app/(components)/services/servicesData";
 
-export default async function ServicePage({
-  params,
-}: {
-  params: { _id: string };
-}) {
-  const getService = async () => {
-    try {
-      const res = await fetch(`${url}/services/${params._id}`);
-      return res.json();
-    } catch (error: any) {
-      console.log(`Failed to load service: ${error.message}
-    `);
-    }
-  };
+export default function ServicePage({ params }: { params: { _id: string } }) {
+  const service = services.find(
+    (service: Service) => service._id === parseInt(params._id),
+  );
 
-  const service: Service = await getService();
+  if (!service) {
+    return (
+      <div className="flex flex-row items-center justify-center text-6xl text-gunmetal">
+        Service not found
+      </div>
+    );
+  }
 
   return (
     <div>

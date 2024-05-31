@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export interface Service {
-  _id: string;
+  _id: number;
   title: string;
   officialTitle: string;
   rateType: string;
@@ -17,7 +17,7 @@ export const officialTitleSplit = (service: Service) => {
   return officialTitleArr;
 };
 
-export default function ServicesList({ services }: { services?: Service[] }) {
+export default function ServicesList({ services }: { services: Service[] }) {
   return (
     <section className="p-6 xl:flex xl:flex-col xl:items-center xl:px-20">
       <ul className="xl:flex xl:flex-row xl:flex-wrap xl:gap-6">
